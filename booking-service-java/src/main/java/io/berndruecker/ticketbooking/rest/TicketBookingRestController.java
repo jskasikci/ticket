@@ -1,6 +1,7 @@
 package io.berndruecker.ticketbooking.rest;
 
 import java.util.HashMap;
+import java.util.List;
 import java.util.UUID;
 
 import org.slf4j.Logger;
@@ -10,6 +11,7 @@ import org.springframework.boot.SpringBootConfiguration;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.PutMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.server.ServerWebExchange;
 
@@ -32,48 +34,51 @@ public class TicketBookingRestController {
   private ZeebeClient client;
 
   @PutMapping("/ticket")
-  public ResponseEntity<BookTicketResponse> bookTicket(ServerWebExchange exchange) {
+  public ResponseEntity<BookTicketResponse> bookTicket(
+      ServerWebExchange exchange,
+      @RequestParam(required = false) List<String> seatIds) { // ✅ Supports multiple seats
+
     String simulateBookingFailure = exchange.getRequest().getQueryParams().getFirst("simulateBookingFailure");
-    
-    // This would be best generated even in the client to allow idempotency!
+
+    // Generate a booking reference ID
     BookTicketResponse response = new BookTicketResponse();
     response.bookingReferenceId = UUID.randomUUID().toString();
-    
-    HashMap<String, Object> variables = new HashMap<String, Object>();
+
+    HashMap<String, Object> variables = new HashMap<>();
     variables.put(ProcessConstants.VAR_BOOKING_REFERENCE_ID, response.bookingReferenceId);
-    if (simulateBookingFailure!=null) {
+
+    if (seatIds != null && !seatIds.isEmpty()) {
+      variables.put(ProcessConstants.VAR_SEAT_ID, seatIds); // ✅ Pass as list
+    }
+
+    if (simulateBookingFailure != null) {
       variables.put(ProcessConstants.VAR_SIMULATE_BOOKING_FAILURE, simulateBookingFailure);
     }
 
-    // Start new instance of the ticket-booking workflow
-    ZeebeFuture<ProcessInstanceResult> future = client.newCreateInstanceCommand() //
-        .bpmnProcessId("ticket-booking") //
-        .latestVersion() //
-        .variables(variables) //
-        .withResult() // wait for the workflow to finish
-        .send(); // with this we get a future
+    // Start Zeebe workflow
+    ZeebeFuture<ProcessInstanceResult> future = client.newCreateInstanceCommand()
+        .bpmnProcessId("ticket-booking")
+        .latestVersion()
+        .variables(variables)
+        .withResult() // Wait for the workflow to finish
+        .send();
 
     try {
-      // Block until it is really done
+      // Block until workflow completes
       ProcessInstanceResult workflowInstanceResult = future.join();
 
-      // Unwrap data from workflow after it finished
+      // Retrieve variables after workflow finishes
       response.reservationId = (String) workflowInstanceResult.getVariablesAsMap().get(ProcessConstants.VAR_RESERVATION_ID);
       response.paymentConfirmationId = (String) workflowInstanceResult.getVariablesAsMap().get(ProcessConstants.VAR_PAYMENT_CONFIRMATION_ID);
       response.ticketId = (String) workflowInstanceResult.getVariablesAsMap().get(ProcessConstants.VAR_TICKET_ID);
-      
+
       return ResponseEntity.status(HttpStatus.OK).body(response);
     } catch (ClientStatusException ex) {
-
-      // of course we can run into a timeout if the workflow does not finish
-      // within that timeframe!
-      logger.error("Timeout on waiting for workflow"); //, ex);
+      logger.error("Timeout on waiting for workflow");
 
       return ResponseEntity.status(HttpStatus.ACCEPTED).build();
     }
   }
-  
-  // TODO: Add API to query status (if you got an 202 earlier on)
 
   public static class BookTicketResponse {
     public String reservationId;
