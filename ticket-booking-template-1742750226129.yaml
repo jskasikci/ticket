@@ -1,0 +1,1371 @@
+---
+Metadata:
+  AWSToolsMetrics:
+    IaC_Generator: "arn:aws:cloudformation:eu-central-1:650251727331:generatedTemplate/10dd12ec-da10-4b16-80ef-545de3dedc95"
+Parameters:
+  LambdaFunctionGenerateTicketDynamoCodeImageUriZ5QmJ:
+    NoEcho: "true"
+    Type: "String"
+    Description: "URI of a [container image](https://docs.aws.amazon.com/lambda/latest/dg/lambda-images.html)\
+      \ in the Amazon ECR registry."
+  LambdaFunctionCostToCloudWatchCodeS3KeyJFQJ0:
+    NoEcho: "true"
+    Type: "String"
+    Description: "The Amazon S3 key of the deployment package."
+  LambdaFunctionGenerateTicketDynamoCodeS3KeyguT72:
+    NoEcho: "true"
+    Type: "String"
+    Description: "The Amazon S3 key of the deployment package."
+  LambdaFunctionProcessPaymentDynamoCodeS3KeylL2Ik:
+    NoEcho: "true"
+    Type: "String"
+    Description: "The Amazon S3 key of the deployment package."
+  LambdaFunctionCostToCloudWatchCodeImageUrioRnWH:
+    NoEcho: "true"
+    Type: "String"
+    Description: "URI of a [container image](https://docs.aws.amazon.com/lambda/latest/dg/lambda-images.html)\
+      \ in the Amazon ECR registry."
+  LambdaFunctionGenerateTicketDynamoCodeS3BucketaPSJK:
+    NoEcho: "true"
+    Type: "String"
+    Description: "An Amazon S3 bucket in the same AWS-Region as your function. The\
+      \ bucket can be in a different AWS-account."
+  LambdaFunctionReserveSeatDynamoCodeImageUri4fwEi:
+    NoEcho: "true"
+    Type: "String"
+    Description: "URI of a [container image](https://docs.aws.amazon.com/lambda/latest/dg/lambda-images.html)\
+      \ in the Amazon ECR registry."
+  LambdaFunctionProcessPaymentDynamoCodeS3ObjectVersionguwcB:
+    NoEcho: "true"
+    Type: "String"
+    Description: "For versioned objects, the version of the deployment package object\
+      \ to use."
+  LambdaFunctionProcessPaymentDynamoCodeSourceKMSKeyArn6CW1b:
+    NoEcho: "true"
+    Type: "String"
+    Description: "The ARN of the KMSlong (KMS) customer managed key that's used to\
+      \ encrypt your function's .zip deployment package. If you don't provide a customer\
+      \ managed key, Lambda uses an [owned key](https://docs.aws.amazon.com/kms/latest/developerguide/concepts.html#aws-owned-cmk)."
+  LambdaFunctionCostToCloudWatchCodeSourceKMSKeyArnj5tI9:
+    NoEcho: "true"
+    Type: "String"
+    Description: "The ARN of the KMSlong (KMS) customer managed key that's used to\
+      \ encrypt your function's .zip deployment package. If you don't provide a customer\
+      \ managed key, Lambda uses an [owned key](https://docs.aws.amazon.com/kms/latest/developerguide/concepts.html#aws-owned-cmk)."
+  LambdaFunctionReserveSeatDynamoCodeS3BucketOfW9U:
+    NoEcho: "true"
+    Type: "String"
+    Description: "An Amazon S3 bucket in the same AWS-Region as your function. The\
+      \ bucket can be in a different AWS-account."
+  LambdaFunctionReserveSeatDynamoCodeZipFile9Gljx:
+    NoEcho: "true"
+    Type: "String"
+    Description: "(Node.js and Python) The source code of your Lambda function. If\
+      \ you include your function source inline with this parameter, CFN places it\
+      \ in a file named ``index`` and zips it to create a [deployment package](https://docs.aws.amazon.com/lambda/latest/dg/gettingstarted-package.html).\
+      \ This zip file cannot exceed 4MB. For the ``Handler`` property, the first part\
+      \ of the handler identifier must be ``index``. For example, ``index.handler``.\n\
+      \  When you specify source code inline for a Node.js function, the ``index``\
+      \ file that CFN creates uses the extension ``.js``. This means that LAM treats\
+      \ the file as a CommonJS module. ES modules aren't supported for inline functions.\n\
+      \   For JSON, you must escape quotes and special characters such as newline\
+      \ (``\\n``) with a backslash.\n If you specify a function that interacts with\
+      \ an AWS CloudFormation custom resource, you don't have to write your own functions\
+      \ to send responses to the custom resource that invoked the function. AWS CloudFormation\
+      \ provides a response module ([cfn-response](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/cfn-lambda-function-code-cfnresponsemodule.html))\
+      \ that simplifies sending responses. See [Using Lambda with CloudFormation](https://docs.aws.amazon.com/lambda/latest/dg/services-cloudformation.html)\
+      \ for details."
+  LambdaFunctionProcessPaymentDynamoCodeZipFileYd79j:
+    NoEcho: "true"
+    Type: "String"
+    Description: "(Node.js and Python) The source code of your Lambda function. If\
+      \ you include your function source inline with this parameter, CFN places it\
+      \ in a file named ``index`` and zips it to create a [deployment package](https://docs.aws.amazon.com/lambda/latest/dg/gettingstarted-package.html).\
+      \ This zip file cannot exceed 4MB. For the ``Handler`` property, the first part\
+      \ of the handler identifier must be ``index``. For example, ``index.handler``.\n\
+      \  When you specify source code inline for a Node.js function, the ``index``\
+      \ file that CFN creates uses the extension ``.js``. This means that LAM treats\
+      \ the file as a CommonJS module. ES modules aren't supported for inline functions.\n\
+      \   For JSON, you must escape quotes and special characters such as newline\
+      \ (``\\n``) with a backslash.\n If you specify a function that interacts with\
+      \ an AWS CloudFormation custom resource, you don't have to write your own functions\
+      \ to send responses to the custom resource that invoked the function. AWS CloudFormation\
+      \ provides a response module ([cfn-response](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/cfn-lambda-function-code-cfnresponsemodule.html))\
+      \ that simplifies sending responses. See [Using Lambda with CloudFormation](https://docs.aws.amazon.com/lambda/latest/dg/services-cloudformation.html)\
+      \ for details."
+  LambdaFunctionCostToCloudWatchCodeZipFilerUtNT:
+    NoEcho: "true"
+    Type: "String"
+    Description: "(Node.js and Python) The source code of your Lambda function. If\
+      \ you include your function source inline with this parameter, CFN places it\
+      \ in a file named ``index`` and zips it to create a [deployment package](https://docs.aws.amazon.com/lambda/latest/dg/gettingstarted-package.html).\
+      \ This zip file cannot exceed 4MB. For the ``Handler`` property, the first part\
+      \ of the handler identifier must be ``index``. For example, ``index.handler``.\n\
+      \  When you specify source code inline for a Node.js function, the ``index``\
+      \ file that CFN creates uses the extension ``.js``. This means that LAM treats\
+      \ the file as a CommonJS module. ES modules aren't supported for inline functions.\n\
+      \   For JSON, you must escape quotes and special characters such as newline\
+      \ (``\\n``) with a backslash.\n If you specify a function that interacts with\
+      \ an AWS CloudFormation custom resource, you don't have to write your own functions\
+      \ to send responses to the custom resource that invoked the function. AWS CloudFormation\
+      \ provides a response module ([cfn-response](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/cfn-lambda-function-code-cfnresponsemodule.html))\
+      \ that simplifies sending responses. See [Using Lambda with CloudFormation](https://docs.aws.amazon.com/lambda/latest/dg/services-cloudformation.html)\
+      \ for details."
+  LambdaFunctionReserveSeatDynamoCodeS3ObjectVersionQnEiz:
+    NoEcho: "true"
+    Type: "String"
+    Description: "For versioned objects, the version of the deployment package object\
+      \ to use."
+  LambdaFunctionGenerateTicketDynamoCodeS3ObjectVersionjhx3j:
+    NoEcho: "true"
+    Type: "String"
+    Description: "For versioned objects, the version of the deployment package object\
+      \ to use."
+  LambdaFunctionGenerateTicketDynamoCodeSourceKMSKeyArn1NZHL:
+    NoEcho: "true"
+    Type: "String"
+    Description: "The ARN of the KMSlong (KMS) customer managed key that's used to\
+      \ encrypt your function's .zip deployment package. If you don't provide a customer\
+      \ managed key, Lambda uses an [owned key](https://docs.aws.amazon.com/kms/latest/developerguide/concepts.html#aws-owned-cmk)."
+  LambdaFunctionReserveSeatDynamoCodeSourceKMSKeyArnceRfm:
+    NoEcho: "true"
+    Type: "String"
+    Description: "The ARN of the KMSlong (KMS) customer managed key that's used to\
+      \ encrypt your function's .zip deployment package. If you don't provide a customer\
+      \ managed key, Lambda uses an [owned key](https://docs.aws.amazon.com/kms/latest/developerguide/concepts.html#aws-owned-cmk)."
+  LambdaFunctionGenerateTicketDynamoCodeZipFilePotuj:
+    NoEcho: "true"
+    Type: "String"
+    Description: "(Node.js and Python) The source code of your Lambda function. If\
+      \ you include your function source inline with this parameter, CFN places it\
+      \ in a file named ``index`` and zips it to create a [deployment package](https://docs.aws.amazon.com/lambda/latest/dg/gettingstarted-package.html).\
+      \ This zip file cannot exceed 4MB. For the ``Handler`` property, the first part\
+      \ of the handler identifier must be ``index``. For example, ``index.handler``.\n\
+      \  When you specify source code inline for a Node.js function, the ``index``\
+      \ file that CFN creates uses the extension ``.js``. This means that LAM treats\
+      \ the file as a CommonJS module. ES modules aren't supported for inline functions.\n\
+      \   For JSON, you must escape quotes and special characters such as newline\
+      \ (``\\n``) with a backslash.\n If you specify a function that interacts with\
+      \ an AWS CloudFormation custom resource, you don't have to write your own functions\
+      \ to send responses to the custom resource that invoked the function. AWS CloudFormation\
+      \ provides a response module ([cfn-response](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/cfn-lambda-function-code-cfnresponsemodule.html))\
+      \ that simplifies sending responses. See [Using Lambda with CloudFormation](https://docs.aws.amazon.com/lambda/latest/dg/services-cloudformation.html)\
+      \ for details."
+  LambdaFunctionProcessPaymentDynamoCodeS3BucketEHEpG:
+    NoEcho: "true"
+    Type: "String"
+    Description: "An Amazon S3 bucket in the same AWS-Region as your function. The\
+      \ bucket can be in a different AWS-account."
+  LambdaFunctionCostToCloudWatchCodeS3Bucketa9FWa:
+    NoEcho: "true"
+    Type: "String"
+    Description: "An Amazon S3 bucket in the same AWS-Region as your function. The\
+      \ bucket can be in a different AWS-account."
+  LambdaFunctionReserveSeatDynamoCodeS3KeyTKwZE:
+    NoEcho: "true"
+    Type: "String"
+    Description: "The Amazon S3 key of the deployment package."
+  LambdaFunctionCostToCloudWatchCodeS3ObjectVersionvZao2:
+    NoEcho: "true"
+    Type: "String"
+    Description: "For versioned objects, the version of the deployment package object\
+      \ to use."
+  LambdaFunctionProcessPaymentDynamoCodeImageUrioGGeD:
+    NoEcho: "true"
+    Type: "String"
+    Description: "URI of a [container image](https://docs.aws.amazon.com/lambda/latest/dg/lambda-images.html)\
+      \ in the Amazon ECR registry."
+Resources:
+  DynamoDBTableTickets:
+    UpdateReplacePolicy: "Retain"
+    Type: "AWS::DynamoDB::Table"
+    DeletionPolicy: "Retain"
+    Properties:
+      SSESpecification:
+        SSEEnabled: false
+      TableName: "Tickets"
+      AttributeDefinitions:
+      - AttributeType: "N"
+        AttributeName: "ID"
+      ContributorInsightsSpecification:
+        Enabled: false
+      BillingMode: "PAY_PER_REQUEST"
+      PointInTimeRecoverySpecification:
+        PointInTimeRecoveryEnabled: false
+      WarmThroughput:
+        ReadUnitsPerSecond: 12000
+        WriteUnitsPerSecond: 4000
+      KeySchema:
+      - KeyType: "HASH"
+        AttributeName: "ID"
+      DeletionProtectionEnabled: false
+      TableClass: "STANDARD"
+      Tags: []
+      TimeToLiveSpecification:
+        Enabled: false
+  IAMRoleLambdaCostMetricsRole:
+    UpdateReplacePolicy: "Retain"
+    Type: "AWS::IAM::Role"
+    DeletionPolicy: "Retain"
+    Properties:
+      Path: "/"
+      ManagedPolicyArns:
+      - "arn:aws:iam::aws:policy/AWSBillingReadOnlyAccess"
+      - "arn:aws:iam::aws:policy/CloudWatchFullAccess"
+      MaxSessionDuration: 3600
+      RoleName: "LambdaCostMetricsRole"
+      Description: "Allows Lambda functions to call AWS services on your behalf."
+      AssumeRolePolicyDocument:
+        Version: "2012-10-17"
+        Statement:
+        - Action: "sts:AssumeRole"
+          Effect: "Allow"
+          Principal:
+            Service: "lambda.amazonaws.com"
+  EC2SecurityGroupIc:
+    UpdateReplacePolicy: "Retain"
+    Type: "AWS::EC2::SecurityGroup"
+    DeletionPolicy: "Retain"
+    Properties:
+      GroupDescription: "launch-wizard-8 created 2025-03-17T17:19:16.452Z"
+      GroupName: "launch-wizard-8"
+      VpcId:
+        Ref: "EC2VPC"
+      SecurityGroupIngress:
+      - CidrIp: "0.0.0.0/0"
+        IpProtocol: "tcp"
+        FromPort: 80
+        ToPort: 80
+      - CidrIp: "0.0.0.0/0"
+        IpProtocol: "tcp"
+        FromPort: 22
+        ToPort: 22
+      - CidrIp: "0.0.0.0/0"
+        IpProtocol: "tcp"
+        FromPort: 3000
+        ToPort: 3000
+      - CidrIp: "0.0.0.0/0"
+        IpProtocol: "tcp"
+        FromPort: 443
+        ToPort: 443
+      SecurityGroupEgress:
+      - CidrIp: "0.0.0.0/0"
+        IpProtocol: "-1"
+        FromPort: -1
+        ToPort: -1
+  IAMRoleDBaccess:
+    UpdateReplacePolicy: "Retain"
+    Type: "AWS::IAM::Role"
+    DeletionPolicy: "Retain"
+    Properties:
+      Path: "/"
+      ManagedPolicyArns:
+      - "arn:aws:iam::aws:policy/AmazonDynamoDBFullAccess"
+      MaxSessionDuration: 3600
+      RoleName: "DBaccess"
+      Description: "Allows EC2 instances to call AWS services on your behalf."
+      AssumeRolePolicyDocument:
+        Version: "2012-10-17"
+        Statement:
+        - Action: "sts:AssumeRole"
+          Effect: "Allow"
+          Principal:
+            Service: "ec2.amazonaws.com"
+  LambdaPermissionFunctioncostToCloudWatch:
+    UpdateReplacePolicy: "Retain"
+    Type: "AWS::Lambda::Permission"
+    DeletionPolicy: "Retain"
+    Properties:
+      FunctionName:
+        Fn::GetAtt:
+        - "LambdaFunctionCostToCloudWatch"
+        - "Arn"
+      Action: "lambda:InvokeFunction"
+      SourceArn:
+        Ref: "EventsRuleRuleCloudWatchCostDaily"
+      Principal: "events.amazonaws.com"
+  AutoScalingAutoScalingGroupTicketAutoScaling:
+    UpdateReplacePolicy: "Retain"
+    Type: "AWS::AutoScaling::AutoScalingGroup"
+    DeletionPolicy: "Retain"
+    Properties:
+      LoadBalancerNames: []
+      ServiceLinkedRoleARN: "arn:aws:iam::650251727331:role/aws-service-role/autoscaling.amazonaws.com/AWSServiceRoleForAutoScaling"
+      TargetGroupARNs:
+      - Ref: "ElasticLoadBalancingV2TargetGroupTargetgroupTicketGroup2c4f8c7abc1c2318"
+      Cooldown: "300"
+      AvailabilityZones:
+      - "eu-central-1a"
+      - "eu-central-1b"
+      AvailabilityZoneDistribution:
+        CapacityDistributionStrategy: "balanced-best-effort"
+      DesiredCapacity: "1"
+      HealthCheckGracePeriod: 300
+      MetricsCollection:
+      - Granularity: "1Minute"
+        Metrics:
+        - "GroupDesiredCapacity"
+        - "GroupMaxSize"
+        - "GroupTerminatingCapacity"
+        - "GroupInServiceCapacity"
+        - "GroupAndWarmPoolDesiredCapacity"
+        - "GroupPendingInstances"
+        - "WarmPoolPendingCapacity"
+        - "WarmPoolTerminatingCapacity"
+        - "GroupPendingCapacity"
+        - "GroupTerminatingInstances"
+        - "GroupMinSize"
+        - "WarmPoolMinSize"
+        - "WarmPoolTotalCapacity"
+        - "WarmPoolDesiredCapacity"
+        - "GroupInServiceInstances"
+        - "GroupAndWarmPoolTotalCapacity"
+        - "GroupStandbyInstances"
+        - "GroupTotalCapacity"
+        - "GroupStandbyCapacity"
+        - "GroupTotalInstances"
+        - "WarmPoolWarmedCapacity"
+      MaxSize: "6"
+      NewInstancesProtectedFromScaleIn: false
+      MinSize: "1"
+      TerminationPolicies:
+      - "Default"
+      LaunchTemplate:
+        Version: "$Default"
+        LaunchTemplateName: "TicketConfig"
+        LaunchTemplateId: "lt-0bb8f6fddc31b2e63"
+      AutoScalingGroupName: "Ticket Auto Scaling"
+      TrafficSources:
+      - Type: "elbv2"
+        Identifier: "arn:aws:elasticloadbalancing:eu-central-1:650251727331:targetgroup/TicketGroup/2c4f8c7abc1c2318"
+      VPCZoneIdentifier:
+      - Ref: "EC2Subnet"
+      - Ref: "EC2SubnetP3"
+      CapacityReservationSpecification:
+        CapacityReservationPreference: "default"
+      Tags:
+      - Value: "Ticket Instance"
+        Key: "Name"
+        PropagateAtLaunch: true
+      HealthCheckType: "EC2"
+  EC2Subnet:
+    UpdateReplacePolicy: "Retain"
+    Type: "AWS::EC2::Subnet"
+    DeletionPolicy: "Retain"
+    Properties:
+      VpcId:
+        Ref: "EC2VPC"
+      MapPublicIpOnLaunch: true
+      EnableDns64: false
+      AvailabilityZoneId: "euc1-az2"
+      PrivateDnsNameOptionsOnLaunch:
+        EnableResourceNameDnsARecord: false
+        HostnameType: "ip-name"
+        EnableResourceNameDnsAAAARecord: false
+      CidrBlock: "172.31.16.0/20"
+      Ipv6Native: false
+      Tags: []
+  ElasticLoadBalancingV2LoadBalancerLoadbalancerappTicketELBac543e70d2a8c0a1:
+    UpdateReplacePolicy: "Retain"
+    Type: "AWS::ElasticLoadBalancingV2::LoadBalancer"
+    DeletionPolicy: "Retain"
+    Properties:
+      IpAddressType: "ipv4"
+      SecurityGroups:
+      - "sg-07aa8e9b0e7ad6cab"
+      LoadBalancerAttributes:
+      - Value: ""
+        Key: "access_logs.s3.prefix"
+      - Value: "append"
+        Key: "routing.http.xff_header_processing.mode"
+      - Value: "true"
+        Key: "routing.http2.enabled"
+      - Value: "false"
+        Key: "waf.fail_open.enabled"
+      - Value: ""
+        Key: "connection_logs.s3.bucket"
+      - Value: "false"
+        Key: "access_logs.s3.enabled"
+      - Value: "false"
+        Key: "zonal_shift.config.enabled"
+      - Value: "defensive"
+        Key: "routing.http.desync_mitigation_mode"
+      - Value: ""
+        Key: "connection_logs.s3.prefix"
+      - Value: "false"
+        Key: "routing.http.x_amzn_tls_version_and_cipher_suite.enabled"
+      - Value: "false"
+        Key: "routing.http.preserve_host_header.enabled"
+      - Value: "true"
+        Key: "load_balancing.cross_zone.enabled"
+      - Value: "false"
+        Key: "routing.http.xff_client_port.enabled"
+      - Value: ""
+        Key: "access_logs.s3.bucket"
+      - Value: "false"
+        Key: "deletion_protection.enabled"
+      - Value: "3600"
+        Key: "client_keep_alive.seconds"
+      - Value: "false"
+        Key: "routing.http.drop_invalid_header_fields.enabled"
+      - Value: "false"
+        Key: "connection_logs.s3.enabled"
+      - Value: "60"
+        Key: "idle_timeout.timeout_seconds"
+      Subnets:
+      - Ref: "EC2Subnet"
+      - Ref: "EC2SubnetP3"
+      Type: "application"
+      Scheme: "internet-facing"
+      EnablePrefixForIpv6SourceNat: "off"
+      EnforceSecurityGroupInboundRulesOnPrivateLinkTraffic: ""
+      Tags: []
+      Name: "TicketELB"
+      SubnetMappings:
+      - SubnetId:
+          Ref: "EC2SubnetP3"
+      - SubnetId:
+          Ref: "EC2Subnet"
+  IAMManagedPolicyPolicyserviceroleAWSLambdaBasicExecutionRole0c9c154fcc6a432ba9f0e753133ab335:
+    UpdateReplacePolicy: "Retain"
+    Type: "AWS::IAM::ManagedPolicy"
+    DeletionPolicy: "Retain"
+    Properties:
+      ManagedPolicyName: "AWSLambdaBasicExecutionRole-0c9c154f-cc6a-432b-a9f0-e753133ab335"
+      Path: "/service-role/"
+      Description: ""
+      Groups: []
+      PolicyDocument:
+        Version: "2012-10-17"
+        Statement:
+        - Resource: "arn:aws:logs:eu-central-1:650251727331:*"
+          Action: "logs:CreateLogGroup"
+          Effect: "Allow"
+        - Resource:
+          - "arn:aws:logs:eu-central-1:650251727331:log-group:/aws/lambda/reserveSeatDynamo:*"
+          Action:
+          - "logs:CreateLogStream"
+          - "logs:PutLogEvents"
+          Effect: "Allow"
+      Roles:
+      - Ref: "IAMRoleReserveSeatDynamoroleji5jlctr"
+      Users: []
+  EC2SecurityGroup:
+    UpdateReplacePolicy: "Retain"
+    Type: "AWS::EC2::SecurityGroup"
+    DeletionPolicy: "Retain"
+    Properties:
+      GroupDescription: "launch-wizard-6 created 2025-03-05T15:35:08.715Z"
+      GroupName: "launch-wizard-6"
+      VpcId:
+        Ref: "EC2VPC"
+      SecurityGroupIngress:
+      - CidrIp: "0.0.0.0/0"
+        IpProtocol: "tcp"
+        FromPort: 80
+        ToPort: 80
+      - CidrIp: "0.0.0.0/0"
+        IpProtocol: "tcp"
+        FromPort: 8080
+        ToPort: 8080
+      - CidrIp: "0.0.0.0/0"
+        IpProtocol: "tcp"
+        FromPort: 22
+        ToPort: 22
+      - CidrIp: "0.0.0.0/0"
+        IpProtocol: "tcp"
+        FromPort: 26500
+        ToPort: 26500
+      - CidrIp: "0.0.0.0/0"
+        IpProtocol: "tcp"
+        FromPort: 443
+        ToPort: 443
+      - CidrIp: "0.0.0.0/0"
+        IpProtocol: "tcp"
+        FromPort: 8081
+        ToPort: 8081
+      SecurityGroupEgress:
+      - CidrIp: "0.0.0.0/0"
+        IpProtocol: "-1"
+        FromPort: -1
+        ToPort: -1
+  EventsEventBusDefault:
+    UpdateReplacePolicy: "Retain"
+    Type: "AWS::Events::EventBus"
+    DeletionPolicy: "Retain"
+    Properties:
+      Tags: []
+      Name: "default"
+  IAMManagedPolicyPolicyserviceroleAWSLambdaBasicExecutionRolee36cc1eb03f742d38532551facf016f7:
+    UpdateReplacePolicy: "Retain"
+    Type: "AWS::IAM::ManagedPolicy"
+    DeletionPolicy: "Retain"
+    Properties:
+      ManagedPolicyName: "AWSLambdaBasicExecutionRole-e36cc1eb-03f7-42d3-8532-551facf016f7"
+      Path: "/service-role/"
+      Description: ""
+      Groups: []
+      PolicyDocument:
+        Version: "2012-10-17"
+        Statement:
+        - Resource: "arn:aws:logs:eu-central-1:650251727331:*"
+          Action: "logs:CreateLogGroup"
+          Effect: "Allow"
+        - Resource:
+          - "arn:aws:logs:eu-central-1:650251727331:log-group:/aws/lambda/generateTicketDynamo:*"
+          Action:
+          - "logs:CreateLogStream"
+          - "logs:PutLogEvents"
+          Effect: "Allow"
+      Roles:
+      - Ref: "IAMRoleGenerateTicketDynamorolecmqqetw9"
+      Users: []
+  DynamoDBTablePayments:
+    UpdateReplacePolicy: "Retain"
+    Type: "AWS::DynamoDB::Table"
+    DeletionPolicy: "Retain"
+    Properties:
+      SSESpecification:
+        SSEEnabled: false
+      TableName: "Payments"
+      AttributeDefinitions:
+      - AttributeType: "N"
+        AttributeName: "ID"
+      ContributorInsightsSpecification:
+        Enabled: false
+      BillingMode: "PAY_PER_REQUEST"
+      PointInTimeRecoverySpecification:
+        PointInTimeRecoveryEnabled: false
+      WarmThroughput:
+        ReadUnitsPerSecond: 12000
+        WriteUnitsPerSecond: 4000
+      KeySchema:
+      - KeyType: "HASH"
+        AttributeName: "ID"
+      DeletionProtectionEnabled: false
+      TableClass: "STANDARD"
+      Tags: []
+      TimeToLiveSpecification:
+        Enabled: false
+  ElasticLoadBalancingV2TargetGroupTargetgroupTicketGroup2c4f8c7abc1c2318:
+    UpdateReplacePolicy: "Retain"
+    Type: "AWS::ElasticLoadBalancingV2::TargetGroup"
+    DeletionPolicy: "Retain"
+    Properties:
+      IpAddressType: "ipv4"
+      HealthCheckIntervalSeconds: 30
+      Matcher:
+        HttpCode: "200"
+      HealthCheckPath: "/"
+      Port: 80
+      Targets:
+      - Port: 80
+        Id: "i-06c7831af7f0a9734"
+      HealthCheckEnabled: true
+      ProtocolVersion: "HTTP1"
+      UnhealthyThresholdCount: 2
+      HealthCheckTimeoutSeconds: 5
+      Name: "TicketGroup"
+      VpcId:
+        Ref: "EC2VPC"
+      HealthyThresholdCount: 5
+      HealthCheckProtocol: "HTTP"
+      TargetGroupAttributes:
+      - Value: "lb_cookie"
+        Key: "stickiness.type"
+      - Value: "86400"
+        Key: "stickiness.app_cookie.duration_seconds"
+      - Value: "1"
+        Key: "target_group_health.dns_failover.minimum_healthy_targets.count"
+      - Value: "use_load_balancer_configuration"
+        Key: "load_balancing.cross_zone.enabled"
+      - Value: "86400"
+        Key: "stickiness.lb_cookie.duration_seconds"
+      - Value: "off"
+        Key: "target_group_health.dns_failover.minimum_healthy_targets.percentage"
+      - Value: "false"
+        Key: "stickiness.enabled"
+      - Value: "off"
+        Key: "target_group_health.unhealthy_state_routing.minimum_healthy_targets.percentage"
+      - Value: "0"
+        Key: "slow_start.duration_seconds"
+      - Value: "300"
+        Key: "deregistration_delay.timeout_seconds"
+      - Value: "1"
+        Key: "target_group_health.unhealthy_state_routing.minimum_healthy_targets.count"
+      - Value: "off"
+        Key: "load_balancing.algorithm.anomaly_mitigation"
+      - Value: ""
+        Key: "stickiness.app_cookie.cookie_name"
+      - Value: "round_robin"
+        Key: "load_balancing.algorithm.type"
+      TargetType: "instance"
+      HealthCheckPort: "traffic-port"
+      Protocol: "HTTP"
+      Tags: []
+  LambdaFunctionReserveSeatDynamo:
+    UpdateReplacePolicy: "Retain"
+    Type: "AWS::Lambda::Function"
+    DeletionPolicy: "Retain"
+    Properties:
+      MemorySize: 128
+      Description: ""
+      TracingConfig:
+        Mode: "PassThrough"
+      Timeout: 3
+      RuntimeManagementConfig:
+        UpdateRuntimeOn: "Auto"
+      Handler: "index.handler"
+      Code:
+        SourceKMSKeyArn:
+          Ref: "LambdaFunctionReserveSeatDynamoCodeSourceKMSKeyArnceRfm"
+        S3ObjectVersion:
+          Ref: "LambdaFunctionReserveSeatDynamoCodeS3ObjectVersionQnEiz"
+        S3Bucket:
+          Ref: "LambdaFunctionReserveSeatDynamoCodeS3BucketOfW9U"
+        ZipFile:
+          Ref: "LambdaFunctionReserveSeatDynamoCodeZipFile9Gljx"
+        ImageUri:
+          Ref: "LambdaFunctionReserveSeatDynamoCodeImageUri4fwEi"
+        S3Key:
+          Ref: "LambdaFunctionReserveSeatDynamoCodeS3KeyTKwZE"
+      Role:
+        Fn::GetAtt:
+        - "IAMRoleReserveSeatDynamoroleji5jlctr"
+        - "Arn"
+      FileSystemConfigs: []
+      FunctionName: "reserveSeatDynamo"
+      Runtime: "nodejs22.x"
+      PackageType: "Zip"
+      LoggingConfig:
+        LogFormat: "Text"
+        LogGroup: "/aws/lambda/reserveSeatDynamo"
+      RecursiveLoop: "Terminate"
+      EphemeralStorage:
+        Size: 512
+      Architectures:
+      - "x86_64"
+  EC2VolumeAttachment:
+    UpdateReplacePolicy: "Retain"
+    Type: "AWS::EC2::VolumeAttachment"
+    DeletionPolicy: "Retain"
+    Properties:
+      InstanceId: "i-0b6ebd84a3427a65f"
+      VolumeId: "vol-02358d7737e701272"
+      Device: "/dev/sda1"
+  DynamoDBTableUsers:
+    UpdateReplacePolicy: "Retain"
+    Type: "AWS::DynamoDB::Table"
+    DeletionPolicy: "Retain"
+    Properties:
+      SSESpecification:
+        SSEEnabled: false
+      TableName: "Users"
+      AttributeDefinitions:
+      - AttributeType: "N"
+        AttributeName: "ID"
+      ContributorInsightsSpecification:
+        Enabled: false
+      BillingMode: "PAY_PER_REQUEST"
+      PointInTimeRecoverySpecification:
+        PointInTimeRecoveryEnabled: false
+      WarmThroughput:
+        ReadUnitsPerSecond: 12000
+        WriteUnitsPerSecond: 4000
+      KeySchema:
+      - KeyType: "HASH"
+        AttributeName: "ID"
+      DeletionProtectionEnabled: false
+      TableClass: "STANDARD"
+      Tags: []
+      TimeToLiveSpecification:
+        Enabled: false
+  EC2SubnetP3:
+    UpdateReplacePolicy: "Retain"
+    Type: "AWS::EC2::Subnet"
+    DeletionPolicy: "Retain"
+    Properties:
+      VpcId:
+        Ref: "EC2VPC"
+      MapPublicIpOnLaunch: true
+      EnableDns64: false
+      AvailabilityZoneId: "euc1-az3"
+      PrivateDnsNameOptionsOnLaunch:
+        EnableResourceNameDnsARecord: false
+        HostnameType: "ip-name"
+        EnableResourceNameDnsAAAARecord: false
+      CidrBlock: "172.31.32.0/20"
+      Ipv6Native: false
+      Tags: []
+  EC2NetworkInterfaceT4:
+    UpdateReplacePolicy: "Retain"
+    Type: "AWS::EC2::NetworkInterface"
+    DeletionPolicy: "Retain"
+    Properties:
+      Description: ""
+      PrivateIpAddress: "172.31.16.251"
+      PrivateIpAddresses:
+      - PrivateIpAddress: "172.31.16.251"
+        Primary: true
+      SecondaryPrivateIpAddressCount: 0
+      Ipv6PrefixCount: 0
+      Ipv4Prefixes: []
+      Ipv4PrefixCount: 0
+      GroupSet:
+      - "sg-0b30dbfac4d42c17e"
+      Ipv6Prefixes: []
+      SubnetId:
+        Ref: "EC2Subnet"
+      SourceDestCheck: true
+      InterfaceType: "interface"
+      Tags: []
+  CloudWatchAlarmCostAlarm:
+    UpdateReplacePolicy: "Retain"
+    Type: "AWS::CloudWatch::Alarm"
+    DeletionPolicy: "Retain"
+    Properties:
+      ComparisonOperator: "GreaterThanThreshold"
+      TreatMissingData: "missing"
+      Period: 300
+      EvaluationPeriods: 1
+      Namespace: "AWS/Cost"
+      OKActions: []
+      AlarmActions:
+      - Ref: "SNSTopicCostAlarmTopic"
+      MetricName: "TotalAccountCost"
+      ActionsEnabled: true
+      AlarmName: "CostAlarm"
+      Statistic: "Average"
+      InsufficientDataActions: []
+      DatapointsToAlarm: 1
+      Tags: []
+      Threshold: 30
+  EventsRuleRuleCloudWatchCostDaily:
+    UpdateReplacePolicy: "Retain"
+    Type: "AWS::Events::Rule"
+    DeletionPolicy: "Retain"
+    Properties:
+      EventBusName:
+        Ref: "EventsEventBusDefault"
+      ScheduleExpression: "rate(1 day)"
+      Targets:
+      - Arn:
+          Fn::GetAtt:
+          - "LambdaFunctionCostToCloudWatch"
+          - "Arn"
+        Id: "2jisat9jiq1k0psc32ak"
+      Id: "CloudWatchCostDaily"
+      State: "ENABLED"
+      Name: "CloudWatchCostDaily"
+  IAMRoleGenerateTicketDynamorolecmqqetw9:
+    UpdateReplacePolicy: "Retain"
+    Type: "AWS::IAM::Role"
+    DeletionPolicy: "Retain"
+    Properties:
+      Path: "/service-role/"
+      ManagedPolicyArns:
+      - "arn:aws:iam::aws:policy/AmazonDynamoDBFullAccess"
+      - "arn:aws:iam::650251727331:policy/service-role/AWSLambdaBasicExecutionRole-e36cc1eb-03f7-42d3-8532-551facf016f7"
+      MaxSessionDuration: 3600
+      RoleName: "generateTicketDynamo-role-cmqqetw9"
+      Policies:
+      - PolicyDocument:
+          Version: "2012-10-17"
+          Statement:
+          - Resource: "arn:aws:dynamodb:eu-central-1:650251727331:table/Tickets"
+            Action:
+            - "dynamodb:Scan"
+            - "dynamodb:GetItem"
+            - "dynamodb:UpdateItem"
+            Effect: "Allow"
+            Sid: "TicketsTable"
+          - Resource: "arn:aws:dynamodb:eu-central-1:650251727331:table/Seats"
+            Action:
+            - "dynamodb:Scan"
+            - "dynamodb:GetItem"
+            - "dynamodb:UpdateItem"
+            Effect: "Allow"
+            Sid: "SeatsTable"
+          - Resource: "arn:aws:dynamodb:eu-central-1:650251727331:table/Users"
+            Action:
+            - "dynamodb:Scan"
+            - "dynamodb:GetItem"
+            - "dynamodb:UpdateItem"
+            Effect: "Allow"
+            Sid: "UsersTable"
+        PolicyName: "PaymentsTicketsReadWrite"
+      AssumeRolePolicyDocument:
+        Version: "2012-10-17"
+        Statement:
+        - Action: "sts:AssumeRole"
+          Effect: "Allow"
+          Principal:
+            Service: "lambda.amazonaws.com"
+  IAMInstanceProfileDBaccess:
+    UpdateReplacePolicy: "Retain"
+    Type: "AWS::IAM::InstanceProfile"
+    DeletionPolicy: "Retain"
+    Properties:
+      Path: "/"
+      Roles:
+      - Ref: "IAMRoleDBaccess"
+      InstanceProfileName:
+        Ref: "IAMRoleDBaccess"
+  IAMRoleLambdaAcess:
+    UpdateReplacePolicy: "Retain"
+    Type: "AWS::IAM::Role"
+    DeletionPolicy: "Retain"
+    Properties:
+      Path: "/"
+      ManagedPolicyArns:
+      - "arn:aws:iam::aws:policy/AWSLambda_FullAccess"
+      MaxSessionDuration: 3600
+      RoleName: "LambdaAcess"
+      Description: "Allows EC2 instances to call AWS services on your behalf."
+      AssumeRolePolicyDocument:
+        Version: "2012-10-17"
+        Statement:
+        - Action: "sts:AssumeRole"
+          Effect: "Allow"
+          Principal:
+            Service: "ec2.amazonaws.com"
+  EC2VolumeYm:
+    UpdateReplacePolicy: "Retain"
+    Type: "AWS::EC2::Volume"
+    DeletionPolicy: "Retain"
+    Properties:
+      MultiAttachEnabled: false
+      SnapshotId: "snap-0e964d47a186bf0a7"
+      VolumeType: "gp3"
+      Encrypted: false
+      Size: 20
+      AutoEnableIO: true
+      AvailabilityZone: "eu-central-1a"
+      Throughput: 125
+      Iops: 3000
+      Tags: []
+  LambdaFunctionCostToCloudWatch:
+    UpdateReplacePolicy: "Retain"
+    Type: "AWS::Lambda::Function"
+    DeletionPolicy: "Retain"
+    Properties:
+      MemorySize: 128
+      Description: ""
+      TracingConfig:
+        Mode: "PassThrough"
+      Timeout: 3
+      RuntimeManagementConfig:
+        UpdateRuntimeOn: "Auto"
+      Handler: "lambda_function.lambda_handler"
+      Code:
+        SourceKMSKeyArn:
+          Ref: "LambdaFunctionCostToCloudWatchCodeSourceKMSKeyArnj5tI9"
+        S3ObjectVersion:
+          Ref: "LambdaFunctionCostToCloudWatchCodeS3ObjectVersionvZao2"
+        S3Bucket:
+          Ref: "LambdaFunctionCostToCloudWatchCodeS3Bucketa9FWa"
+        ZipFile:
+          Ref: "LambdaFunctionCostToCloudWatchCodeZipFilerUtNT"
+        ImageUri:
+          Ref: "LambdaFunctionCostToCloudWatchCodeImageUrioRnWH"
+        S3Key:
+          Ref: "LambdaFunctionCostToCloudWatchCodeS3KeyJFQJ0"
+      Role:
+        Fn::GetAtt:
+        - "IAMRoleLambdaCostMetricsRole"
+        - "Arn"
+      FileSystemConfigs: []
+      FunctionName: "costToCloudWatch"
+      Runtime: "python3.13"
+      PackageType: "Zip"
+      LoggingConfig:
+        LogFormat: "Text"
+        LogGroup: "/aws/lambda/costToCloudWatch"
+      RecursiveLoop: "Terminate"
+      EphemeralStorage:
+        Size: 512
+      Architectures:
+      - "x86_64"
+  EC2Instance:
+    UpdateReplacePolicy: "Retain"
+    Type: "AWS::EC2::Instance"
+    DeletionPolicy: "Retain"
+    Properties:
+      Tenancy: "default"
+      SecurityGroups:
+      - "launch-wizard-8"
+      PrivateIpAddress: "172.31.16.251"
+      BlockDeviceMappings:
+      - Ebs:
+          SnapshotId: "snap-0e964d47a186bf0a7"
+          VolumeType: "gp3"
+          Iops: 3000
+          VolumeSize: 20
+          Encrypted: false
+          DeleteOnTermination: true
+        DeviceName: "/dev/sda1"
+      IamInstanceProfile:
+        Ref: "IAMInstanceProfileDBaccess"
+      SubnetId:
+        Ref: "EC2Subnet"
+      EbsOptimized: false
+      Volumes:
+      - VolumeId: "vol-05ec1c161145ed032"
+        Device: "/dev/sda1"
+      NetworkInterfaces:
+      - PrivateIpAddresses:
+        - PrivateIpAddress: "172.31.16.251"
+          Primary: true
+        SecondaryPrivateIpAddressCount: 0
+        DeviceIndex: "0"
+        GroupSet:
+        - Ref: "EC2SecurityGroupIc"
+        Ipv6Addresses: []
+        SubnetId:
+          Ref: "EC2Subnet"
+        AssociatePublicIpAddress: true
+        NetworkInterfaceId:
+          Ref: "EC2NetworkInterfaceT4"
+        DeleteOnTermination: true
+      ImageId: "ami-07eef52105e8a2059"
+      InstanceType: "t2.micro"
+      Monitoring: false
+      Tags:
+      - Value: "front"
+        Key: "Name"
+      InstanceInitiatedShutdownBehavior: "stop"
+      CpuOptions:
+        ThreadsPerCore: 1
+        CoreCount: 1
+      AvailabilityZone: "eu-central-1a"
+      PrivateDnsNameOptions:
+        EnableResourceNameDnsARecord: true
+        HostnameType: "ip-name"
+        EnableResourceNameDnsAAAARecord: false
+      SecurityGroupIds:
+      - "sg-0b30dbfac4d42c17e"
+      DisableApiTermination: false
+      KeyName: "key"
+      SourceDestCheck: true
+      PlacementGroupName: ""
+      VpcId: "vpc-07de01d5dc70eaf9c"
+      State:
+        Code: "16"
+        Name: "running"
+      CreditSpecification:
+        CPUCredits: "standard"
+  EC2Volume:
+    UpdateReplacePolicy: "Retain"
+    Type: "AWS::EC2::Volume"
+    DeletionPolicy: "Retain"
+    Properties:
+      MultiAttachEnabled: false
+      SnapshotId: "snap-0e964d47a186bf0a7"
+      VolumeType: "gp3"
+      Encrypted: false
+      Size: 25
+      AutoEnableIO: true
+      AvailabilityZone: "eu-central-1b"
+      Throughput: 125
+      Iops: 3000
+      Tags: []
+  IAMInstanceProfileLambdaAcess:
+    UpdateReplacePolicy: "Retain"
+    Type: "AWS::IAM::InstanceProfile"
+    DeletionPolicy: "Retain"
+    Properties:
+      Path: "/"
+      Roles:
+      - Ref: "IAMRoleLambdaAcess"
+      InstanceProfileName:
+        Ref: "IAMRoleLambdaAcess"
+  IAMManagedPolicyPolicyserviceroleAWSLambdaBasicExecutionRolec1bea8ef43054474a6dc296afd0aad4b:
+    UpdateReplacePolicy: "Retain"
+    Type: "AWS::IAM::ManagedPolicy"
+    DeletionPolicy: "Retain"
+    Properties:
+      ManagedPolicyName: "AWSLambdaBasicExecutionRole-c1bea8ef-4305-4474-a6dc-296afd0aad4b"
+      Path: "/service-role/"
+      Description: ""
+      Groups: []
+      PolicyDocument:
+        Version: "2012-10-17"
+        Statement:
+        - Resource: "arn:aws:logs:eu-central-1:650251727331:*"
+          Action: "logs:CreateLogGroup"
+          Effect: "Allow"
+        - Resource:
+          - "arn:aws:logs:eu-central-1:650251727331:log-group:/aws/lambda/processPaymentDynamo:*"
+          Action:
+          - "logs:CreateLogStream"
+          - "logs:PutLogEvents"
+          Effect: "Allow"
+      Roles:
+      - Ref: "IAMRoleProcessPaymentDynamoroleukn1o59n"
+      Users: []
+  IAMRoleProcessPaymentDynamoroleukn1o59n:
+    UpdateReplacePolicy: "Retain"
+    Type: "AWS::IAM::Role"
+    DeletionPolicy: "Retain"
+    Properties:
+      Path: "/service-role/"
+      ManagedPolicyArns:
+      - "arn:aws:iam::650251727331:policy/service-role/AWSLambdaBasicExecutionRole-c1bea8ef-4305-4474-a6dc-296afd0aad4b"
+      - "arn:aws:iam::aws:policy/AmazonDynamoDBFullAccess"
+      MaxSessionDuration: 3600
+      RoleName: "processPaymentDynamo-role-ukn1o59n"
+      Policies:
+      - PolicyDocument:
+          Version: "2012-10-17"
+          Statement:
+          - Resource: "arn:aws:dynamodb:eu-central-1:650251727331:table/Seats"
+            Action:
+            - "dynamodb:Scan"
+            - "dynamodb:GetItem"
+            - "dynamodb:UpdateItem"
+            Effect: "Allow"
+            Sid: "SeatsTable"
+          - Resource: "arn:aws:dynamodb:eu-central-1:650251727331:table/Payments"
+            Action:
+            - "dynamodb:Scan"
+            - "dynamodb:GetItem"
+            - "dynamodb:UpdateItem"
+            Effect: "Allow"
+            Sid: "PaymentsTable"
+          - Resource: "arn:aws:dynamodb:eu-central-1:650251727331:table/Users"
+            Action:
+            - "dynamodb:Scan"
+            - "dynamodb:GetItem"
+            - "dynamodb:UpdateItem"
+            Effect: "Allow"
+            Sid: "UsersTable"
+        PolicyName: "SeatsPaymentsReadWrite"
+      AssumeRolePolicyDocument:
+        Version: "2012-10-17"
+        Statement:
+        - Action: "sts:AssumeRole"
+          Effect: "Allow"
+          Principal:
+            Service: "lambda.amazonaws.com"
+  IAMRoleReserveSeatDynamoroleji5jlctr:
+    UpdateReplacePolicy: "Retain"
+    Type: "AWS::IAM::Role"
+    DeletionPolicy: "Retain"
+    Properties:
+      Path: "/service-role/"
+      ManagedPolicyArns:
+      - "arn:aws:iam::650251727331:policy/service-role/AWSLambdaBasicExecutionRole-0c9c154f-cc6a-432b-a9f0-e753133ab335"
+      - "arn:aws:iam::aws:policy/AmazonDynamoDBFullAccess"
+      MaxSessionDuration: 3600
+      RoleName: "reserveSeatDynamo-role-ji5jlctr"
+      Policies:
+      - PolicyDocument:
+          Version: "2012-10-17"
+          Statement:
+          - Resource: "arn:aws:dynamodb:eu-central-1:650251727331:table/Seats"
+            Action:
+            - "dynamodb:Scan"
+            - "dynamodb:GetItem"
+            - "dynamodb:UpdateItem"
+            Effect: "Allow"
+            Sid: "Statement1"
+        PolicyName: "SeatsReadWrite"
+      AssumeRolePolicyDocument:
+        Version: "2012-10-17"
+        Statement:
+        - Action: "sts:AssumeRole"
+          Effect: "Allow"
+          Principal:
+            Service: "lambda.amazonaws.com"
+  EC2InstancePi:
+    UpdateReplacePolicy: "Retain"
+    Type: "AWS::EC2::Instance"
+    DeletionPolicy: "Retain"
+    Properties:
+      Tenancy: "default"
+      SecurityGroups:
+      - "launch-wizard-6"
+      PrivateIpAddress: "172.31.46.10"
+      BlockDeviceMappings:
+      - Ebs:
+          SnapshotId: "snap-0e964d47a186bf0a7"
+          VolumeType: "gp3"
+          Iops: 3000
+          VolumeSize: 25
+          Encrypted: false
+          DeleteOnTermination: true
+        DeviceName: "/dev/sda1"
+      IamInstanceProfile:
+        Ref: "IAMInstanceProfileLambdaAcess"
+      SubnetId:
+        Ref: "EC2SubnetP3"
+      EbsOptimized: false
+      Volumes:
+      - VolumeId: "vol-02358d7737e701272"
+        Device: "/dev/sda1"
+      NetworkInterfaces:
+      - PrivateIpAddresses:
+        - PrivateIpAddress: "172.31.46.10"
+          Primary: true
+        SecondaryPrivateIpAddressCount: 0
+        DeviceIndex: "0"
+        GroupSet:
+        - Ref: "EC2SecurityGroup"
+        Ipv6Addresses: []
+        SubnetId:
+          Ref: "EC2SubnetP3"
+        AssociatePublicIpAddress: true
+        NetworkInterfaceId:
+          Ref: "EC2NetworkInterface"
+        DeleteOnTermination: true
+      ImageId: "ami-07eef52105e8a2059"
+      InstanceType: "t2.micro"
+      Monitoring: false
+      Tags:
+      - Value: "ticket"
+        Key: "Name"
+      InstanceInitiatedShutdownBehavior: "stop"
+      CpuOptions:
+        ThreadsPerCore: 1
+        CoreCount: 1
+      AvailabilityZone: "eu-central-1b"
+      PrivateDnsNameOptions:
+        EnableResourceNameDnsARecord: true
+        HostnameType: "ip-name"
+        EnableResourceNameDnsAAAARecord: false
+      SecurityGroupIds:
+      - "sg-02b908a2eddf6096c"
+      DisableApiTermination: false
+      KeyName: "key"
+      SourceDestCheck: true
+      PlacementGroupName: ""
+      VpcId: "vpc-07de01d5dc70eaf9c"
+      State:
+        Code: "16"
+        Name: "running"
+      CreditSpecification:
+        CPUCredits: "standard"
+  LambdaFunctionProcessPaymentDynamo:
+    UpdateReplacePolicy: "Retain"
+    Type: "AWS::Lambda::Function"
+    DeletionPolicy: "Retain"
+    Properties:
+      MemorySize: 128
+      Description: ""
+      TracingConfig:
+        Mode: "PassThrough"
+      Timeout: 3
+      RuntimeManagementConfig:
+        UpdateRuntimeOn: "Auto"
+      Handler: "index.handler"
+      Code:
+        SourceKMSKeyArn:
+          Ref: "LambdaFunctionProcessPaymentDynamoCodeSourceKMSKeyArn6CW1b"
+        S3ObjectVersion:
+          Ref: "LambdaFunctionProcessPaymentDynamoCodeS3ObjectVersionguwcB"
+        S3Bucket:
+          Ref: "LambdaFunctionProcessPaymentDynamoCodeS3BucketEHEpG"
+        ZipFile:
+          Ref: "LambdaFunctionProcessPaymentDynamoCodeZipFileYd79j"
+        ImageUri:
+          Ref: "LambdaFunctionProcessPaymentDynamoCodeImageUrioGGeD"
+        S3Key:
+          Ref: "LambdaFunctionProcessPaymentDynamoCodeS3KeylL2Ik"
+      Role:
+        Fn::GetAtt:
+        - "IAMRoleProcessPaymentDynamoroleukn1o59n"
+        - "Arn"
+      FileSystemConfigs: []
+      FunctionName: "processPaymentDynamo"
+      Runtime: "nodejs22.x"
+      PackageType: "Zip"
+      LoggingConfig:
+        LogFormat: "Text"
+        LogGroup: "/aws/lambda/processPaymentDynamo"
+      RecursiveLoop: "Terminate"
+      EphemeralStorage:
+        Size: 512
+      Architectures:
+      - "x86_64"
+  SNSTopicCostAlarmTopic:
+    UpdateReplacePolicy: "Retain"
+    Type: "AWS::SNS::Topic"
+    DeletionPolicy: "Retain"
+    Properties:
+      FifoTopic: false
+      Subscription:
+      - Endpoint: "guicamhor@gmail.com"
+        Protocol: "email"
+      ArchivePolicy: {}
+      TopicName: "CostAlarmTopic"
+  ElasticLoadBalancingV2ListenerListenerappTicketELBac543e70d2a8c0a118fdcb2c126c52ed:
+    UpdateReplacePolicy: "Retain"
+    Type: "AWS::ElasticLoadBalancingV2::Listener"
+    DeletionPolicy: "Retain"
+    Properties:
+      ListenerAttributes:
+      - Value: "true"
+        Key: "routing.http.response.server.enabled"
+      - Value: ""
+        Key: "routing.http.response.access_control_allow_headers.header_value"
+      - Value: ""
+        Key: "routing.http.response.x_frame_options.header_value"
+      - Value: ""
+        Key: "routing.http.response.access_control_allow_methods.header_value"
+      - Value: ""
+        Key: "routing.http.response.access_control_allow_origin.header_value"
+      - Value: ""
+        Key: "routing.http.response.access_control_allow_credentials.header_value"
+      - Value: ""
+        Key: "routing.http.response.x_content_type_options.header_value"
+      - Value: ""
+        Key: "routing.http.response.content_security_policy.header_value"
+      - Value: ""
+        Key: "routing.http.response.access_control_expose_headers.header_value"
+      - Value: ""
+        Key: "routing.http.response.strict_transport_security.header_value"
+      - Value: ""
+        Key: "routing.http.response.access_control_max_age.header_value"
+      Protocol: "HTTP"
+      LoadBalancerArn:
+        Ref: "ElasticLoadBalancingV2LoadBalancerLoadbalancerappTicketELBac543e70d2a8c0a1"
+      DefaultActions:
+      - TargetGroupArn:
+          Ref: "ElasticLoadBalancingV2TargetGroupTargetgroupTicketGroup2c4f8c7abc1c2318"
+        Type: "forward"
+        ForwardConfig:
+          TargetGroupStickinessConfig:
+            Enabled: false
+          TargetGroups:
+          - TargetGroupArn:
+              Ref: "ElasticLoadBalancingV2TargetGroupTargetgroupTicketGroup2c4f8c7abc1c2318"
+            Weight: 1
+      Port: 80
+  EC2VPC:
+    UpdateReplacePolicy: "Retain"
+    Type: "AWS::EC2::VPC"
+    DeletionPolicy: "Retain"
+    Properties:
+      CidrBlock: "172.31.0.0/16"
+      EnableDnsSupport: true
+      InstanceTenancy: "default"
+      EnableDnsHostnames: true
+      Tags: []
+  EC2VolumeAttachmentEQ:
+    UpdateReplacePolicy: "Retain"
+    Type: "AWS::EC2::VolumeAttachment"
+    DeletionPolicy: "Retain"
+    Properties:
+      InstanceId: "i-0372c751a5c8df48b"
+      VolumeId: "vol-05ec1c161145ed032"
+      Device: "/dev/sda1"
+  EC2NetworkInterface:
+    UpdateReplacePolicy: "Retain"
+    Type: "AWS::EC2::NetworkInterface"
+    DeletionPolicy: "Retain"
+    Properties:
+      Description: ""
+      PrivateIpAddress: "172.31.46.10"
+      PrivateIpAddresses:
+      - PrivateIpAddress: "172.31.46.10"
+        Primary: true
+      SecondaryPrivateIpAddressCount: 0
+      Ipv6PrefixCount: 0
+      Ipv4Prefixes: []
+      Ipv4PrefixCount: 0
+      GroupSet:
+      - "sg-02b908a2eddf6096c"
+      Ipv6Prefixes: []
+      SubnetId:
+        Ref: "EC2SubnetP3"
+      SourceDestCheck: true
+      InterfaceType: "interface"
+      Tags: []
+  LambdaFunctionGenerateTicketDynamo:
+    UpdateReplacePolicy: "Retain"
+    Type: "AWS::Lambda::Function"
+    DeletionPolicy: "Retain"
+    Properties:
+      MemorySize: 128
+      Description: ""
+      TracingConfig:
+        Mode: "PassThrough"
+      Timeout: 3
+      RuntimeManagementConfig:
+        UpdateRuntimeOn: "Auto"
+      Handler: "index.handler"
+      Code:
+        SourceKMSKeyArn:
+          Ref: "LambdaFunctionGenerateTicketDynamoCodeSourceKMSKeyArn1NZHL"
+        S3ObjectVersion:
+          Ref: "LambdaFunctionGenerateTicketDynamoCodeS3ObjectVersionjhx3j"
+        S3Bucket:
+          Ref: "LambdaFunctionGenerateTicketDynamoCodeS3BucketaPSJK"
+        ZipFile:
+          Ref: "LambdaFunctionGenerateTicketDynamoCodeZipFilePotuj"
+        ImageUri:
+          Ref: "LambdaFunctionGenerateTicketDynamoCodeImageUriZ5QmJ"
+        S3Key:
+          Ref: "LambdaFunctionGenerateTicketDynamoCodeS3KeyguT72"
+      Role:
+        Fn::GetAtt:
+        - "IAMRoleGenerateTicketDynamorolecmqqetw9"
+        - "Arn"
+      FileSystemConfigs: []
+      FunctionName: "generateTicketDynamo"
+      Runtime: "nodejs22.x"
+      PackageType: "Zip"
+      LoggingConfig:
+        LogFormat: "Text"
+        LogGroup: "/aws/lambda/generateTicketDynamo"
+      RecursiveLoop: "Terminate"
+      EphemeralStorage:
+        Size: 512
+      Architectures:
+      - "x86_64"
+  S3BucketDevopsticketbooking:
+    UpdateReplacePolicy: "Retain"
+    Type: "AWS::S3::Bucket"
+    DeletionPolicy: "Retain"
+    Properties:
+      PublicAccessBlockConfiguration:
+        RestrictPublicBuckets: true
+        IgnorePublicAcls: true
+        BlockPublicPolicy: true
+        BlockPublicAcls: true
+      BucketName: "devopsticketbooking"
+      OwnershipControls:
+        Rules:
+        - ObjectOwnership: "BucketOwnerEnforced"
+      BucketEncryption:
+        ServerSideEncryptionConfiguration:
+        - BucketKeyEnabled: true
+          ServerSideEncryptionByDefault:
+            SSEAlgorithm: "AES256"
+  DynamoDBTableSeats:
+    UpdateReplacePolicy: "Retain"
+    Type: "AWS::DynamoDB::Table"
+    DeletionPolicy: "Retain"
+    Properties:
+      SSESpecification:
+        SSEEnabled: false
+      TableName: "Seats"
+      AttributeDefinitions:
+      - AttributeType: "N"
+        AttributeName: "ID"
+      ContributorInsightsSpecification:
+        Enabled: false
+      BillingMode: "PAY_PER_REQUEST"
+      PointInTimeRecoverySpecification:
+        PointInTimeRecoveryEnabled: false
+      WarmThroughput:
+        ReadUnitsPerSecond: 12000
+        WriteUnitsPerSecond: 4000
+      KeySchema:
+      - KeyType: "HASH"
+        AttributeName: "ID"
+      DeletionProtectionEnabled: false
+      TableClass: "STANDARD"
+      Tags: []
+      TimeToLiveSpecification:
+        Enabled: false
